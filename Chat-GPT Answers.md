@@ -1,6 +1,6 @@
 ### QUESTION
 
-Inside my HTML code, I usually use `<script src="./mindar-image-three.prod.js"></script>` `<script src="./main.js" type="module"></script>` inside the `<body>` tag. However, some tutorials show me I'm supposed to use those two code lines inside the `<head>` tag instead. Why is that?
+###### Inside my HTML code, I usually use `<script src="./mindar-image-three.prod.js"></script>` `<script src="./main.js" type="module"></script>` inside the `<body>` tag. However, some tutorials show me I'm supposed to use those two code lines inside the `<head>` tag instead. Why is that?
 
 
 
