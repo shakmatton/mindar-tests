@@ -10,11 +10,11 @@ Inside my HTML code, I usually use `<script src="./mindar-image-three.prod.js"><
 
 ###### If you place the `<script>` tag inside the `<head>` section, it means that the browser will load and execute the script before rendering the page content. This can be useful if you need to define some functions or variables that are used later in the page, or if you want to run some code as soon as possible². 
 
-However, this can also cause a **performance or page load issue**, because the script may block the rendering of the page until it is downloaded and executed. This can result in a **blank or unresponsive page** for some time, which can affect the user experience²³.
+##### However, this can also cause a **performance or page load issue**, because the script may block the rendering of the page until it is downloaded and executed. This can result in a **blank or unresponsive page** for some time, which can affect the user experience²³.
 
 ###### If you place the `<script>` tag inside the `<body>` section, it means that the browser will load and execute the script after rendering the page content. This can be useful if you want to avoid blocking the page rendering, or if your script depends on some elements that are defined in the body². 
 
-However, this can also cause some problems if your script needs to run before some events or actions that may occur in the page, such as user interactions or DOM manipulations². This can result in a **delayed or incorrect functionality** of your script, which can also affect the user experience²³.
+##### However, this can also cause some problems if your script needs to run before some events or actions that may occur in the page, such as user interactions or DOM manipulations². This can result in a **delayed or incorrect functionality** of your script, which can also affect the user experience²³.
 
 ###### A common practice is to place **library scripts** such as jQuery or other frameworks in the `<head>` section, and place **normal scripts** that use those libraries or write page content in the `<body>` section, preferably at the end of it²⁴. This way, you can ensure that your libraries are loaded before your scripts, and that your scripts do not interfere with the page rendering²⁴. However, this is not a strict rule, and you may need to adjust your placement depending on your specific needs and goals.
 
