@@ -1,0 +1,49 @@
+<!-- We will test another way of dealing with videos in AR: Streaming Videos (using Vimeo).   -->
+
+<!-- 
+  
+  There are usually 2 ways of dealing with AR: 
+  
+  a) Video capture (see lesson "230-video"), where we wrote up an HTML video and used it in a video texture.
+  b) Streaming. But in this case, we need to use <iframe> and 'CSS3DObject'.
+
+  PS.: About the console error "Refused to display 'https://vimeo.com/' in a frame because it set 'X-Frame-Options' to 'sameorigin'.":
+  There is no magic way to find an acceptable means to embed any arbitrary URL. You need to handle each video provider on a case-by-case basis.
+  So, Youtube, Vimeo, Dailymotion and others must be set according to their site instructions.
+  
+  For Vimeo, the solution is to replace the original URL (vimeo.com/video/240903966?h=bdbbbacaa1) for (https://player.vimeo.com/video/240903966?h=bdbbbacaa1). 
+  Also, for better results, right click on AdBlock plugin (top right side, the brave lion shield icon), and click on "deactivate the shield on 127.0.0.1".
+
+-->
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./mindar-image-three.prod.js"></script>
+    <script src="./main.js" type="module"></script>
+
+    <style>
+      html, body {
+	      position: relative; 
+        margin: 0; 
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+      }
+
+      #ar-div{                      
+        visibility: hidden;               
+      }                                 
+
+    </style>
+  </head>
+
+  <body>
+
+      <div id="ar-div">
+        <iframe src="https://player.vimeo.com/video/240903966?h=bdbbbacaa1" width="1000" height="1000"></iframe>     
+        <!-- We use the value of 1000px to make it match with the target image. -->
+      </div>      
+
+  </body>
+</html>

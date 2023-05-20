@@ -1,0 +1,49 @@
+<!-- We will test the CSS renderer capabilities in AR. -->
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./mindar-image-three.prod.js"></script>
+    <script src="./main.js" type="module"></script>
+
+    <style>
+      html, body {
+	      position: relative; 
+        margin: 0; 
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden;
+      }
+
+      #ar-div{                          /* We stylize our 'ar-div' id (created below). */
+        
+      /* Just a reminder: 1 unit of length === to 3 units of length in target AR. */
+      /* But in the case of HTML elements, the width of the pixel image is === to a 1000 pixels. */ 
+      
+        width: 1000px;
+        height: 1000px;                 
+        visibility: hidden;             /* We won't be able to see it at first, when the app is being launched. */
+      
+        /* The following styles are not related to our AR app (we'll just use them to make it all visually better). */
+      
+        background: #0000ff;
+        opacity: 0.6;
+        font-size: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+      }                                 
+
+    </style>
+  </head>
+
+  <body>
+
+      <div id="ar-div">                 <!-- We create an unique 'ar-div' id. -->        
+        ¡Hola! Soy un CSS div.          
+      </div>
+
+  </body>
+</html>
